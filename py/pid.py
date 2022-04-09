@@ -1,10 +1,4 @@
-##################################################
-# Code Created by "Lankash"
-#  @5/2/2022
-# File Contents: 2 PID Functions + PID Class
-# /
 
-# import pid
 import time
 import os.path
 from dataclasses import dataclass
