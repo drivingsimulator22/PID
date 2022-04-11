@@ -1,4 +1,3 @@
-
 import time
 import os.path
 from dataclasses import dataclass
@@ -61,11 +60,11 @@ def update(system, setPoint, measurement):
     #
     # Compare O/P and Apply clipping limits
     #
-    system.outPut = system.proportional + system.integ + system.diff
+    system.outPut = system.prop + system.integ + system.diff
 
     if (system.outPut > system.limMax):
         system.outPut = system.limMax
-    elif (system.output < system.limMin):
+    elif (system.outPut < system.limMin):
         system.outPut = system.limMin
     #
     # Store the new values: Error & Measurements
@@ -77,4 +76,3 @@ def update(system, setPoint, measurement):
     #
     return system.outPut
 # ...........................Function End........................#
-
